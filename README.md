@@ -2,7 +2,7 @@
 ## Deepmimic
 Deepmimic is an algorithm which uses motion capture data to train a policy using Proximal Policy Optimization (PPO).
 ![Cartwheel](/Figs/humanoid_cartwheel.gif)
-.caption[Taken from https://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/]
+[Gifs are taken from https://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/]
 
 ## Trajectory Optimization
 
