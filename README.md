@@ -1,7 +1,7 @@
 # Trajectory Optimization output as reference for Deepmimic on Solo12
 ## Deepmimic
 Deepmimic is an algorithm which uses motion capture data to train a policy using Proximal Policy Optimization (PPO).
-![Cartwheel](/Figs/humanoid_cartwheel.gif)
+![Cartwheel](/Figs/humanoid_cartwheel.gif "Taken from https://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/")
 
 ## Trajectory Optimization
 
