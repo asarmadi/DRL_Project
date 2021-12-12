@@ -11,6 +11,8 @@ The reward function for each timestep is as
 where each reward term is reported in the following table
 ![formula](/Figs/3.png)
 ## Trajectory Optimization
+The reference motions for Deepmimic is generated using a trajectory optimization algorithm described in [Ponton et al. paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9350175). Three reference motions (i.e., jumping, bounding, and walking) are generated for Solo12 as follows:
+![jumping](/Figs/solo12_jump_two_jumps_trajectory.mp4)
 
 ## Solo12
 Solo12 is a 12 Degree of Freedom (DOF) robot unveiled by [Open Dynamics Robot Initiative](https://github.com/open-dynamic-robot-initiative) and all the hardware and software has been open sourced.
