@@ -16,8 +16,11 @@ Solo12 is a 12 Degree of Freedom (DOF) robot unveiled by [Open Dynamics Robot In
 
 ## Trajectory Optimization
 The reference motions for Deepmimic is generated using a trajectory optimization algorithm described in [Ponton et al. paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9350175). Three reference motions (i.e., jumping, bounding, and walking) are generated for Solo12 as follows:
-![jumping](/Figs/solo12_jump_two_jumps_trajectory.gif)
-![bounding](/Figs/solo12_bounding_1_trajectory.gif)
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![jumping](/Figs/solo12_jump_two_jumps_trajectory.gif)  |  ![bounding](/Figs/solo12_bounding_1_trajectory.gif)
+
+
 ![pacing](/Figs/solo12_pace_trajectory.gif)
 
 
