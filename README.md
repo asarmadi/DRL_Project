@@ -4,7 +4,9 @@ Deepmimic is an algorithm which uses motion capture data to train a policy using
 ![Cartwheel](/Figs/humanoid_cartwheel.gif)
 
 [Gifs are taken from https://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/]
+
 The goal is to train a policy which imitates a given reference motion. Each motion is consists of target poses. In this work, the following pose components are considered
+
 ![formula](/Figs/1.png)
 The reward function for each timestep is as
 ![formula](/Figs/2.png)
