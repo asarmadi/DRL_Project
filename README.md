@@ -4,8 +4,12 @@ Deepmimic is an algorithm which uses motion capture data to train a policy using
 ![Cartwheel](/Figs/humanoid_cartwheel.gif)
 
 [Gifs are taken from https://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/]
-The goal is to train a policy which imitates a given reference motion. Each motion is consists of target poses. In this work, the poses are $x_{base}$ the position of the robot base, $q_{base}$ the base quaternion, $\omega_{base}$, the base angular velocity, and $q_{joint}$ the joint positions. Corresponding reference values are shown with $\hat$.
-![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\pi}=-1)
+The goal is to train a policy which imitates a given reference motion. Each motion is consists of target poses. In this work, the following pose components are considered
+![formula](/Figs/1.png)
+The reward function for each timestep is as
+![formula](/Figs/2.png)
+where each reward term is reported in the following table
+![formula](/Figs/3.png)
 ## Trajectory Optimization
 
 ## Solo12
