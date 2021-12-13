@@ -32,10 +32,12 @@ Jumping            |  Bounding             |  Pace
 ## Policy
 A multi-layer fully connected neural network is considered as the policy. The policy has 2 layers with 1024 and 512 neurons in each layer. The activation function for the hidden layers is relu and for output is tanh. The policy is trained using PPO methodology. Various combination of hyperparameters are considered to achieve the desired goal. Following figure shows the mean reward per episode during the training for Jumping trajectory
 
-![formula](/Figs/mean_reward.png)
+:-------------------------:|:-------------------------:|:-------------------------:
+| ![formula](/Figs/mean_reward.png) |
 
 The policy is run during the inference as follows
 
+:-------------------------:|:-------------------------:|:-------------------------:
 | ![jumping](/Figs/solo12_motor_rotor_test_1.gif) |
 
 It could be seen that the policy is not able to mimic the reference trajectory. 
