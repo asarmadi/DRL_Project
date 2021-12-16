@@ -29,8 +29,9 @@ Jumping            |  Bounding             |  Pace
 :-------------------------:|:-------------------------:|:-------------------------:
 ![jumping](/Figs/solo12_jump_two_jumps_trajectory.gif)  |  ![bounding](/Figs/solo12_bounding_1_trajectory.gif)  |  ![pacing](/Figs/solo12_pace_trajectory.gif)
 
-## Policy
-A multi-layer fully connected neural network is considered as the policy. The policy has 2 layers with 1024 and 512 neurons in each layer. The activation function for the hidden layers is relu and for output is tanh. The policy is trained using PPO methodology. Various combination of hyperparameters are considered to achieve the desired goal. Following figure shows the mean reward per episode during the training for Jumping trajectory
+## Policy Training
+A multi-layer fully connected neural network is considered as the policy. The policy has 2 layers with 1024 and 512 neurons in each layer. The activation function for the hidden layers is relu and for output is tanh. The policy is trained using PPO methodology. In Deepmimic paper, two design decisions are considered crucial for allowing the model to learn the tasks: Initial State Distribution and Early termination. In this project, I have considered both of them. For early termination, 4 termination conditions are considered: base stability, base impact, imitation length, and knee impact. In the base stability condition, when the base angle in x and y direction is greater than a threshold, then the episode is terminated. In base impact condition when the base contacts the ground and in knee impact condition if the upper legs contact the ground, then the episode is terminated. In imitation length condition, makes sure the episode does not go beyond the reference trajectory length. Another important challenge in this project is to choose between joints position or torque control.
+Various combination of hyperparameters are considered to achieve the desired goal. Following figure shows the mean reward per episode during the training for Jumping trajectory
 
 
 ![fo](/Figs/mean_reward.png)
