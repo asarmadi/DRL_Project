@@ -34,8 +34,8 @@ A multi-layer fully connected neural network is considered as the policy. The po
 
 One Termination Condition            |  Multiple Termination Condition 
 :-------------------------:|:-------------------------:
-![fo](/Figs/mean_reward.png) | ![fo](/Figs/mean_reward.png)
-![jumping](/Figs/solo12_jump_two_jumps_trajectory.gif)  |  ![bounding](/Figs/solo12_bounding_1_trajectory.gif)
+![fo](/Figs/mean_reward.png) | ![fo](/Figs/mean_reward_torque.png)
+![jumping](/Figs/solo12_motor_rotor_test_1.gif)  |  ![bounding](/Figs/torque.gif)
 
 
 Another important challenge in this project is to choose between joints position or torque control. In the deepmimic the have considered the position control. However, I thought torque control makes the problem more easier to solve.
