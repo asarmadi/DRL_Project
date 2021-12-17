@@ -30,7 +30,7 @@ Jumping            |  Bounding             |  Pace
 ![jumping](/Figs/solo12_jump_two_jumps_trajectory.gif)  |  ![bounding](/Figs/solo12_bounding_1_trajectory.gif)  |  ![pacing](/Figs/solo12_pace_trajectory.gif)
 
 ## Policy Training
-A multi-layer fully connected neural network is considered as the policy. The policy has 2 layers with 1024 and 512 neurons in each layer. The activation function for the hidden layers is relu and for output is tanh. The policy is trained using PPO methodology. In Deepmimic paper, two design decisions are considered crucial for allowing the model to learn the tasks: Initial State Distribution and Early termination. In this project, I have considered both of them. For early termination, 4 termination conditions are considered: base stability, base impact, imitation length, and knee impact. In the base stability condition, when the base angle in x and y direction is greater than a threshold, then the episode is terminated. In base impact condition when the base contacts the ground and in knee impact condition if the upper legs contact the ground, then the episode is terminated. In imitation length condition, makes sure the episode does not go beyond the reference trajectory length. I found the early termination very important to find better performances. Initially, only base stability condition was used , but after adding the other 3 termination conditions, the performance improved a lot.
+A multi-layer fully connected neural network is considered as the policy. The policy has 2 layers with 1024 and 512 neurons in each layer. The activation function for the hidden layers is relu and for output is tanh. The policy is trained using PPO methodology. In Deepmimic paper, two design decisions are considered crucial for allowing the model to learn the tasks: Initial State Distribution and Early termination. In this project, I have considered both of them. For early termination, 4 termination conditions are considered: base stability, base impact, imitation length, and knee impact. In the base stability condition, when the base angle in x and y direction is greater than a threshold, then the episode is terminated. In base impact condition when the base contacts the ground and in knee impact condition if the upper legs contact the ground, then the episode is terminated. In imitation length condition, makes sure the episode does not go beyond the reference trajectory length. I found the early termination very important to find better performances. Initially, only base stability condition was used , but after adding the other 3 termination conditions, the performance improved a lot. Following figures show, the comparison between these cases:
 
 One Termination Condition            |  Multiple Termination Condition 
 :-------------------------:|:-------------------------:
@@ -38,7 +38,7 @@ One Termination Condition            |  Multiple Termination Condition
 ![jumping](/Figs/solo12_motor_rotor_test_1.gif)  |  ![bounding](/Figs/torque.gif)
 
 
-Another important challenge in this project is to choose between joints position or torque control. In the deepmimic the have considered the position control. However, I thought torque control makes the problem more easier to solve.
+Another important challenge in this project is to choose between joints position or torque control. In the deepmimic the have considered the position control. However, I thought torque control makes the problem more easier to solve. Following figures show, the overall behaviour of these two modes:
 
 Torque Control            |  Position Control
 :-------------------------:|:-------------------------:
@@ -46,4 +46,6 @@ Torque Control            |  Position Control
 ![jumping](/Figs/torque.gif)  |  ![bounding](/Figs/position.gif)
 
 
-Various combination of hyperparameters are considered to achieve the desired goal. Following figure shows the mean reward per episode during the training for Jumping trajectory. It could be seen that the policy is not able to mimic the reference trajectory. 
+Based on these observations, I decided to choose position control. However, another challenge is to tune the hyperparameters of the reward. The following figure shows the final hyperparameters chosen
+
+![formula](/Figs/4.png)
