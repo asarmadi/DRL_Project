@@ -49,3 +49,10 @@ Torque Control            |  Position Control
 Based on these observations, I decided to choose position control. However, another challenge is to tune the hyperparameters of the reward. The following figure shows the final hyperparameters chosen
 
 ![formula](/Figs/4.png)
+
+Following figures are corresponding to these chooses. It could be seen that ...
+
+
+Mean Reward During Training            |  Policy Behaviour
+:-------------------------:|:-------------------------:
+![fo](/Figs/mean_reward_torque.png) | ![jumping](/Figs/torque.gif)
