@@ -38,7 +38,7 @@ One Termination Condition            |  Multiple Termination Condition
 ![jumping](/Figs/solo12_motor_rotor_test_1.gif)  |  ![bounding](/Figs/torque.gif)
 
 
-Another important challenge in this project is to choose between joints position or torque control. In the deepmimic the have considered the position control. However, I thought torque control makes the problem more easier to solve. Following figures show, the overall behaviour of these two modes:
+Another important challenge in this project is to choose between joints position or torque control. In the deepmimic the have considered the position control. At first, I thought torque control makes the problem more easier to solve. However, it turns out that position control performs better. Following figures show, the overall behaviour of these two modes:
 
 Torque Control            |  Position Control
 :-------------------------:|:-------------------------:
@@ -55,4 +55,4 @@ Following figures are corresponding to these chooses. It could be seen that ...
 
 Mean Reward During Training            |  Policy Behaviour
 :-------------------------:|:-------------------------:
-![fo](/Figs/mean_reward_torque.png) | ![jumping](/Figs/torque.gif)
+![fo](/Figs/mean_reward_final.png) | ![jumping](/Figs/final.gif)
