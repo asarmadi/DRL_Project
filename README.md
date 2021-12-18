@@ -50,9 +50,12 @@ Based on these observations, I decided to choose position control. However, anot
 
 ![formula](/Figs/4.png)
 
-Following figures are corresponding to these chooses. It could be seen that ...
+Following figures are corresponding to these chooses.
 
 
 Mean Reward During Training            |  Policy Behaviour
 :-------------------------:|:-------------------------:
 ![fo](/Figs/mean_reward_final.png) | ![jumping](/Figs/final.gif)
+
+## Conclusion
+It could be seen that the policy is not successful to imitate the reference trajectory (i.e., jumping). This could be due to the choice of the reward. However, this problem is very interesting to me and I keep modyfing the reward to see how I can make it work. If this works, I plan to implement the policy on the real robot to see whether the solution could be used on the real robot which is different from the simulation environment.
